@@ -74,12 +74,10 @@ public class ApiService {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             ArrayList<String> types = new ArrayList<>();
-                            if (typesBool) {
-                                JSONArray jsonArrayType = jsonObject.getJSONArray("types");
-                                for (int i = 0; i < jsonArrayType.length(); i++) {
-                                    String nameType = jsonArrayType.getJSONObject(i).getJSONObject("type").getString("name");
-                                    types.add(nameType);
-                                }
+                            JSONArray jsonArrayType = jsonObject.getJSONArray("types");
+                            for (int i = 0; i < jsonArrayType.length(); i++) {
+                                String nameType = jsonArrayType.getJSONObject(i).getJSONObject("type").getString("name");
+                                types.add(nameType);
                             }
 
                             Pokemon pokemon = new Pokemon(
