@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginVertical="10sp"
+        android:layout_height="121dp"
+        android:src="@drawable/pokelogo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewPokeDetailsFront"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:layout_marginVertical="10sp"
+            android:src="@drawable/pokeload" />
+
+        <ImageView
+            android:id="@+id/imageViewPokeDetailsBack"
+            android:layout_width="180sp"
+            android:layout_height="180sp"
+            android:layout_marginVertical="10sp"
+            android:src="@drawable/pokeload" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/namePoke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/pokemon"
+        android:text="name"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/weightPoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/pokemon"
+            android:layout_marginHorizontal="20sp"
+            android:text="weight"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/heightPoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/pokemon"
+            android:layout_marginHorizontal="20sp"
+            android:text="height"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/typesDetailList"
+        tools:listitem="@layout/types_details"
+        android:layout_marginVertical="10sp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+</LinearLayout>
